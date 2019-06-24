@@ -127,6 +127,8 @@ table {
 }
 .about-content .bottom-about h2 {
   width: 100%;
+  text-align: center;
+  font-weight: bold;
 }
 .about-content .bottom-about .profile {
   height: 300px;
@@ -134,6 +136,9 @@ table {
 }
 .about-content .bottom-about .profile img {
   height: 250px;
+}
+.about-content .bottom-about .profile h4 {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=index.css.map */
