@@ -1,0 +1,9 @@
+// a modified structure of smacss
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+@import '0-plugins/plugins-dir'; // frameworks go here
+@import '1-base/base-dir'; // includes the resets and globally applied rules, generally applying to single elements and psuedo selectors
+@import '2-layouts/layouts-dir'; // layouts are sections of a page that organize modules
+@import '3-modules/modules-dir'; // small components that contain a few elements like a nav bar; these are designed to be applied to multiple pages
+// state and theme are also options to add, but this doesn't use them
