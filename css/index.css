@@ -94,4 +94,46 @@ table {
   border-spacing: 0;
 }
 
+.about-content {
+  margin: auto;
+  width: 80%;
+}
+.about-content .top-about {
+  display: flex;
+}
+.about-content .top-about img {
+  height: 300px;
+  width: 230px;
+}
+.about-content .top-about div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.about-content .top-about div h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.about-content .top-about div P {
+  font-weight: bold;
+}
+.about-content .bottom-about {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.about-content .bottom-about h2 {
+  width: 100%;
+}
+.about-content .bottom-about .profile {
+  height: 300px;
+  width: 250px;
+}
+.about-content .bottom-about .profile img {
+  height: 250px;
+}
+
 /*# sourceMappingURL=index.css.map */

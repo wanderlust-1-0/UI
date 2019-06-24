@@ -1,0 +1,47 @@
+.about-content {
+    margin: auto; 
+    width: 80%;
+
+    .top-about{
+        display: flex;
+        img {
+            height: 300px;
+            width: 230px;
+        }
+       
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+
+            h3{
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            P{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .bottom-about {
+        width: 80%;
+        h2 {
+            width: 100%;
+            text-align: center;
+        }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .profile{
+            height: 300px;
+            width: 250px;
+            img {
+                height: 250px;
+            }
+        }
+    }
+}
