@@ -9,6 +9,7 @@ html {
 html, body {
   font-family: "Roboto", sans-serif;
   height: 100%;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -92,6 +93,16 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+header {
+  display: absolute;
+  background-image: url("../../assets/images/backgrounds/header-background.jpg");
+}
+@media (min-width: 502px) {
+  header {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
