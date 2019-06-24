@@ -1,0 +1,7 @@
+header {
+  display: absolute;
+  background-image: url('../../assets/images/backgrounds/header-background.jpg');
+  @include tablet {
+    display: none;
+  }
+}
