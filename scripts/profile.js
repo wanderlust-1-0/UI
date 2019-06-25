@@ -14,7 +14,6 @@ class Profile {
         const bios = document.querySelectorAll('.bio');
         bios.forEach(para => para.classList.remove('bio-toggle'));
         this.bioInfo.classList.add('bio-toggle');
-        console.log(window.innerWidth);
     }
 }
 
