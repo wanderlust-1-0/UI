@@ -4,6 +4,7 @@ footer {
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+
   @include tablet {
     justify-content: space-between;
     margin: auto;
@@ -23,7 +24,6 @@ footer {
     margin-left: 10px;
     @include tablet {
       display: block;
-
     }
   }
 

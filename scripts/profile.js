@@ -26,8 +26,13 @@ class Profile {
             modal.style.display = "block";
             let modalH4 = document.querySelector('.modal-content h4');
             let modalImg = document.querySelector('.modal-content img');
-            modalH4.textContent = this.element.querySelector('h4').textContent;
+            let modalTitle = document.querySelector('.modal-content .modal-title');
+            let modalBio = document.querySelector('.modal-content .modal-bio');
+
             modalImg.src = this.image.src;
+            modalH4.textContent = this.element.querySelector('h4').textContent;
+            modalTitle.textContent = this.element.querySelector('p').textContent;
+            modalBio.textContent = this.bioInfo.textContent;
         }});
     }
 
