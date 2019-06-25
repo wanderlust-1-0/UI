@@ -12,8 +12,13 @@ html, body {
   width: 100%;
 }
 
+body {
+  display: block;
+  margin: 0 auto;
+}
+
 h1, h2, h3, h4, h5 {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -24,6 +29,10 @@ h2 {
   font-size: 2.3rem;
   font-weight: bold;
   padding-bottom: 10px;
+}
+
+@include tablet {
+
 }
 
 h4 {
