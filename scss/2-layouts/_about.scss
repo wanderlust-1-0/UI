@@ -1,6 +1,10 @@
 .about-content {
   margin: 0;
   width: 90%;
+  @include desktop {
+    max-width: 1000px;
+    margin: auto;
+  }
 
   .top-about {
     display: flex;
@@ -35,16 +39,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    @include desktop {
+      justify-content: center;
+    }
 
     h2 {
       width: 100%;
       font-size: 2rem;
       text-align: center;
       font-weight: bold;
+      font-family: 'Roboto'
     }
 
     .profile {
       margin-top: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
       height: 300px;
       width: 250px;
 

@@ -3,9 +3,22 @@ footer {
   width: 90%;
   display: flex;
   justify-content: center;
+  @include tablet {
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    max-width: 1000px;
+    margin: auto;
+  }
 
   p {
     display: none;
+    margin-left: 10px;
+    @include tablet {
+      display: block;
+
+    }
   }
 
   div {

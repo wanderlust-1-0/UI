@@ -13,7 +13,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Indie Flower", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -99,6 +99,12 @@ table {
   margin: 0;
   width: 90%;
 }
+@media (min-width: 800px) {
+  .about-content {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
 .about-content .top-about {
   display: flex;
   justify-content: space-around;
@@ -128,14 +134,22 @@ table {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+@media (min-width: 800px) {
+  .about-content .bottom-about {
+    justify-content: center;
+  }
+}
 .about-content .bottom-about h2 {
   width: 100%;
   font-size: 2rem;
   text-align: center;
   font-weight: bold;
+  font-family: "Roboto";
 }
 .about-content .bottom-about .profile {
   margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   height: 300px;
   width: 250px;
 }
@@ -162,8 +176,25 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (min-width: 502px) {
+  footer {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 800px) {
+  footer {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
 footer p {
   display: none;
+  margin-left: 10px;
+}
+@media (min-width: 502px) {
+  footer p {
+    display: block;
+  }
 }
 footer div {
   display: flex;
