@@ -2,19 +2,87 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,8 +92,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -33,16 +110,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -60,14 +141,19 @@ html {
   font-size: 62.5%;
 }
 
-html, body {
-  font-family: "Roboto", sans-serif;
+html,
+body {
+  font-family: "Roboto";
   height: 100%;
   width: 100%;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: "Roboto", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto";
 }
 
 h1 {
@@ -101,7 +187,7 @@ img {
 }
 
 .about-content {
-  margin: 0;
+  margin: auto;
   width: 90%;
 }
 @media (min-width: 800px) {
@@ -111,6 +197,7 @@ img {
   }
 }
 .about-content .top-about {
+  margin-top: 20px;
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -152,7 +239,6 @@ img {
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
-  height: 300px;
   width: 250px;
 }
 .about-content .bottom-about .profile img {
@@ -161,10 +247,20 @@ img {
 .about-content .bottom-about .profile h4 {
   font-weight: bold;
 }
+.about-content .bottom-about .profile .bio {
+  display: none;
+  margin: auto;
+  margin-top: 20px;
+  width: 250px;
+}
+.about-content .bottom-about .profile .bio-toggle {
+  display: block;
+}
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
-  background-color: 99AAB5;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
+  background-color: 99aab5;
   background-blend-mode: darken;
   background-size: cover;
   background-position: left center;
@@ -199,7 +295,7 @@ header h1 {
 header button {
   display: block;
   align-self: center;
-  background-color: #7289DA;
+  background-color: #7289da;
   color: white;
   font-weight: bold;
   padding: 1.2rem 3.5rem;
