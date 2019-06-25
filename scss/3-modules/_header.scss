@@ -1,9 +1,15 @@
 header {
-  background-image: url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
+  background-color: 99AAB5;
+  background-blend-mode: darken;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
   background-size: cover;
   background-position: left center;
-  height: 60rem;
-  .top {
+  height: 61.5rem;
+
+  .header-top {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -11,7 +17,6 @@ header {
 
     h2 {
       margin: 0 1.7rem;
-  //    width: auto;
       font-family: 'Roboto', sans-serif;
       color: white;
     }
@@ -19,21 +24,33 @@ header {
     .menu-btn {
       height: 2rem;
       display: inline-block;
-//      position: absolute;
-//      right: 10px;
       margin-right: 13px;
+
+      @include tablet {
+        display: none;
+      }
     }
-
   }
-//  a {
-//    font-family: 'Robot', sans-serif;
-//  }
-//  display: none;
-//  @include tablet {
-////    display: none;
-//  }
-}
 
+  h1 {
+    color: white;
+    margin-top: 20rem;
+    text-align: center;
+  }
+  button {
+    display: block;
+//    width: 13rem;
+//    height: 4rem;
+    align-self: center;
+    background-color: #7289DA;
+    color: white;
+    font-weight: bold;
+    padding: 1.2rem 3.5rem;
+    border: none;
+    margin: 4.3rem auto 0;
+  }
+
+}
 nav {
   position: absolute;
   top: 35px;
@@ -52,6 +69,16 @@ nav {
       &:last-child {
         border-bottom: 1px solid darkgrey;
       }
+    }
+
+    @include tablet {
+
+    }
+  }
+
+  &.menu--closed {
+    a {
+      display: none;
     }
   }
 }
