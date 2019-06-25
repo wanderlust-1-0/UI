@@ -1,148 +1,18 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+/* Error: expected "{".
+ *   ,
+ * 7 | >>>>>>> af768823d0c73dd4625178139f990e0bab55d1ad
+ *   |                                                 ^
+ *   '
+ *   scss/1-base/_base-dir.scss 7:49  root stylesheet
+ *   scss/index.scss 6:9              root stylesheet */
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a   \2577 \a 7 \2502  >>>>>>> af768823d0c73dd4625178139f990e0bab55d1ad\d\a   \2502                                                  ^\a   \2575 \a   scss/1-base/_base-dir.scss 7:49  root stylesheet\a   scss/index.scss 6:9              root stylesheet';
 }
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-html, body {
-  font-family: "Roboto", sans-serif;
-  height: 100%;
-  width: 100%;
-}
-
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 3.2rem;
-  padding-bottom: 10px;
-}
-
-h4 {
-  font-size: 2.5rem;
-  padding-bottom: 10px;
-}
-
-p {
-  line-height: 1.5;
-  font-size: 1.6rem;
-  padding-bottom: 10px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.about-content {
-  margin: auto;
-  width: 80%;
-}
-.about-content .top-about {
-  display: flex;
-}
-.about-content .top-about img {
-  height: 300px;
-  width: 230px;
-}
-.about-content .top-about div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-}
-.about-content .top-about div h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.about-content .top-about div P {
-  font-weight: bold;
-}
-.about-content .bottom-about {
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.about-content .bottom-about h2 {
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
-}
-.about-content .bottom-about .profile {
-  height: 300px;
-  width: 250px;
-}
-.about-content .bottom-about .profile img {
-  height: 250px;
-}
-.about-content .bottom-about .profile h4 {
-  font-weight: bold;
-}
-
-header {
-  background-image: url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
-  background-size: cover;
-  background-position: left center;
-  height: 61rem;
-}
-
-/*# sourceMappingURL=index.css.map */
