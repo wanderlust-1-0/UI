@@ -2,87 +2,19 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -92,17 +24,8 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -110,20 +33,16 @@ body {
   line-height: 1;
 }
 
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after,
+q:before, q:after {
   content: "";
   content: none;
 }
@@ -141,19 +60,19 @@ html {
   font-size: 62.5%;
 }
 
-html,
-body {
+html, body {
   font-family: "Roboto";
   height: 100%;
   width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Roboto";
+body {
+  display: block;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -258,8 +177,7 @@ img {
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
   background-color: 99aab5;
   background-blend-mode: darken;
   background-size: cover;
@@ -273,9 +191,8 @@ header .header-top {
   padding: 1rem 0;
 }
 header .header-top h2 {
-  margin: 0 1.7rem;
-  font-family: "Roboto", sans-serif;
   color: white;
+  margin: 0 1.7rem;
 }
 header .header-top .menu-btn {
   height: 2rem;
@@ -288,9 +205,24 @@ header .header-top .menu-btn {
   }
 }
 header h1 {
+  max-width: 90%;
   color: white;
-  margin-top: 20rem;
   text-align: center;
+  margin: 20rem auto 0;
+}
+@media (min-width: 502px) {
+  header h1 {
+    max-width: 80%;
+    font-size: 5rem;
+    font-weight: 700;
+  }
+}
+@media (min-width: 800px) {
+  header h1 {
+    max-width: 60%;
+    text-align: left;
+    margin: 20rem 4rem 0;
+  }
 }
 header button {
   display: block;
@@ -310,18 +242,23 @@ nav {
 }
 nav.menu--open a {
   display: block;
-  background: lightgrey;
+  color: white;
   font-size: 1.6rem;
   text-align: center;
-  border: 1px solid darkgrey;
-  border-bottom: none;
   padding: 0.8rem;
 }
-nav.menu--open a:last-child {
-  border-bottom: 1px solid darkgrey;
+@media (min-width: 502px) {
+  nav.menu--open {
+    display: block;
+  }
 }
 nav.menu--closed a {
   display: none;
+}
+@media (min-width: 502px) {
+  nav.menu--closed a {
+    display: block;
+  }
 }
 
 footer {
