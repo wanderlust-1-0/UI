@@ -1,0 +1,15 @@
+footer {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+
+    p {
+        display: none;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+    }
+}

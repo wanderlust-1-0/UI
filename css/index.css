@@ -96,32 +96,33 @@ table {
 }
 
 .about-content {
-  margin: auto;
-  width: 80%;
+  margin: 0;
+  width: 90%;
 }
 .about-content .top-about {
   display: flex;
+  justify-content: space-around;
 }
 .about-content .top-about img {
-  height: 300px;
-  width: 230px;
+  height: 250px;
+  width: 200px;
 }
 .about-content .top-about div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 45%;
 }
 .about-content .top-about div h3 {
   font-size: 1.5rem;
   font-weight: bold;
 }
-.about-content .top-about div P {
+.about-content .top-about div p {
   font-weight: bold;
 }
 .about-content .bottom-about {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -140,6 +141,20 @@ table {
 }
 .about-content .bottom-about .profile h4 {
   font-weight: bold;
+}
+
+footer {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  display: none;
+}
+footer div {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
 }
 
 header {
