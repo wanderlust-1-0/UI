@@ -61,13 +61,13 @@ html {
 }
 
 html, body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   height: 100%;
   width: 100%;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
 }
 
 h1 {
@@ -96,7 +96,7 @@ img {
 }
 
 .about-content {
-  margin: 0;
+  margin: auto;
   width: 90%;
 }
 @media (min-width: 800px) {
@@ -147,7 +147,6 @@ img {
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
-  height: 300px;
   width: 250px;
 }
 .about-content .bottom-about .profile img {
@@ -155,6 +154,17 @@ img {
 }
 .about-content .bottom-about .profile h4 {
   font-weight: bold;
+}
+.about-content .bottom-about .profile .bio {
+  display: none;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 300px;
+  width: 250px;
+}
+.about-content .bottom-about .profile .bio-toggle {
+  display: block;
 }
 
 header {

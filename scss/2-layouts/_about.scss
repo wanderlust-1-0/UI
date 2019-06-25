@@ -1,5 +1,5 @@
 .about-content {
-  margin: 0;
+  margin: auto;
   width: 90%;
   @include desktop {
     max-width: 1000px;
@@ -36,6 +36,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
     @include desktop {
       justify-content: center;
     }
@@ -51,7 +52,6 @@
       margin-top: 20px;
       margin-left: 10px;
       margin-right: 10px;
-      height: 300px;
       width: 250px;
 
       img {
@@ -60,6 +60,19 @@
 
       h4 {
         font-weight: bold;
+      }
+
+      .bio {
+        display: none;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 300px;
+        width: 250px;
+      }
+
+      .bio-toggle {
+        display: block;
       }
     }
   }
