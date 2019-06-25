@@ -1,3 +1,17 @@
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+
 class Profile {
     constructor(element){
         this.element = element;
@@ -7,8 +21,17 @@ class Profile {
         this.image = this.element.querySelector('img');
         this.image.addEventListener('click', () => {
             if(parseInt(window.innerWidth) <= 500)
-            {this.bioToggleMobile()}});
+            {this.bioToggleMobile()}
+        else {
+            modal.style.display = "block";
+            let modalH4 = document.querySelector('.modal-content h4');
+            let modalImg = document.querySelector('.modal-content img');
+            modalH4.textContent = this.element.querySelector('h4').textContent;
+            modalImg.src = this.image.src;
+        }});
     }
+
+
 
     bioToggleMobile() {
         const bios = document.querySelectorAll('.bio');
@@ -16,21 +39,6 @@ class Profile {
         this.bioInfo.classList.add('bio-toggle');
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const profiles = document.querySelectorAll('.profile');
 profiles.forEach(profile => new Profile(profile));
