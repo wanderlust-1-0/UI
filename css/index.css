@@ -157,9 +157,8 @@ img {
 }
 .about-content .bottom-about .profile .bio {
   display: none;
+  margin: auto;
   margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
   height: 300px;
   width: 250px;
 }
