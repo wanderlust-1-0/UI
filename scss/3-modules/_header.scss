@@ -3,6 +3,28 @@ header {
   background-size: cover;
   background-position: left center;
   height: 60rem;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem 0;
+
+    h2 {
+      margin: 0 1.7rem;
+  //    width: auto;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+    }
+
+    .menu-btn {
+      height: 2rem;
+      display: inline-block;
+//      position: absolute;
+//      right: 10px;
+      margin-right: 13px;
+    }
+
+  }
 //  a {
 //    font-family: 'Robot', sans-serif;
 //  }
@@ -10,4 +32,26 @@ header {
 //  @include tablet {
 ////    display: none;
 //  }
+}
+
+nav {
+  position: absolute;
+  top: 35px;
+  right: 2px;
+
+  &.menu--open {
+    a {
+      display: block;
+      background: lightgrey;
+      font-size: 1.6rem;
+      text-align: center;
+      border: 1px solid darkgrey;
+      border-bottom: none;
+      padding: .8rem;
+
+      &:last-child {
+        border-bottom: 1px solid darkgrey;
+      }
+    }
+  }
 }
