@@ -1,0 +1,35 @@
+footer {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @include tablet {
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    display: none;
+    margin-left: 10px;
+    @include tablet {
+      display: block;
+
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+}
