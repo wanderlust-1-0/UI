@@ -146,7 +146,18 @@ table {
   font-weight: bold;
 }
 
+header {
+  display: absolute;
+  background-image: url("../../assets/images/backgrounds/header-background.jpg");
+}
+@media (min-width: 502px) {
+  header {
+    display: none;
+  }
+}
+
 footer {
+  margin-bottom: 20px;
   width: 90%;
   display: flex;
   justify-content: center;
@@ -158,16 +169,6 @@ footer div {
   display: flex;
   justify-content: space-around;
   width: 30%;
-}
-
-header {
-  display: absolute;
-  background-image: url("../../assets/images/backgrounds/header-background.jpg");
-}
-@media (min-width: 502px) {
-  header {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=index.css.map */
