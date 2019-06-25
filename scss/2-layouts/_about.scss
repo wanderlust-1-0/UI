@@ -30,6 +30,7 @@
   }
 
   .bottom-about {
+    margin-top: 30px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -37,11 +38,13 @@
 
     h2 {
       width: 100%;
+      font-size: 2rem;
       text-align: center;
       font-weight: bold;
     }
 
     .profile {
+      margin-top: 20px;
       height: 300px;
       width: 250px;
 
