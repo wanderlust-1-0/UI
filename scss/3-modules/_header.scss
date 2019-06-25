@@ -1,7 +1,13 @@
 header {
-  display: absolute;
-  background-image: url('../../assets/images/backgrounds/header-background.jpg');
-  @include tablet {
-    display: none;
-  }
+  background-image: url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
+  background-size: cover;
+  background-position: left center;
+  height: 60rem;
+//  a {
+//    font-family: 'Robot', sans-serif;
+//  }
+//  display: none;
+//  @include tablet {
+////    display: none;
+//  }
 }
