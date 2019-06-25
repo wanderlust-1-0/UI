@@ -12,7 +12,7 @@ footer {
   }
 
   @include desktop {
-    max-width: 1000px;
+    max-width: $content-max-width;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;

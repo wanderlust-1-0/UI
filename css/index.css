@@ -78,11 +78,27 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 3.6rem;
 }
+@media (min-width: 502px) {
+  h1 {
+    font-size: 5.8rem;
+    font-weight: 700;
+  }
+}
 
 h2 {
   font-size: 2.3rem;
   font-weight: bold;
   padding-bottom: 10px;
+}
+@media (min-width: 502px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 800px) {
+  h2 {
+    font-size: 3.5rem;
+  }
 }
 
 h4 {
@@ -103,6 +119,11 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.index-content {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .about-content {
@@ -178,11 +199,19 @@ img {
 
 header {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
-  background-color: 99aab5;
-  background-blend-mode: darken;
   background-size: cover;
   background-position: left center;
   height: 61.5rem;
+}
+@media (min-width: 502px) {
+  header {
+    height: 65rem;
+  }
+}
+@media (min-width: 800px) {
+  header {
+    height: 70rem;
+  }
 }
 header .header-top {
   display: flex;
@@ -192,7 +221,7 @@ header .header-top {
 }
 header .header-top h2 {
   color: white;
-  margin: 0 1.7rem;
+  margin: 0.8rem 4rem;
 }
 header .header-top .menu-btn {
   height: 2rem;
@@ -213,15 +242,13 @@ header h1 {
 @media (min-width: 502px) {
   header h1 {
     max-width: 80%;
-    font-size: 5rem;
-    font-weight: 700;
   }
 }
 @media (min-width: 800px) {
   header h1 {
     max-width: 60%;
     text-align: left;
-    margin: 20rem 4rem 0;
+    margin: 21.5rem 4.5rem 0;
   }
 }
 header button {

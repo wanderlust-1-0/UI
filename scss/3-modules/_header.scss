@@ -1,14 +1,16 @@
 header {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
-  background-color: 99aab5;
-  background-blend-mode: darken;
-  //  display: flex;
-  //  flex-direction: column;
-  //  justify-content: space-between;
   background-size: cover;
   background-position: left center;
   height: 61.5rem;
+
+  @include tablet {
+    height: 65rem;
+  }
+  @include desktop {
+    height: 70rem;
+  }
 
   .header-top {
     display: flex;
@@ -18,7 +20,7 @@ header {
 
     h2 {
       color: white;
-      margin: 0 1.7rem;
+      margin: .8rem 4rem;
     }
 
     .menu-btn {
@@ -40,14 +42,12 @@ header {
 
     @include tablet {
       max-width: 80%;
-      font-size: 5rem;
-      font-weight: 700;
     }
 
     @include desktop {
       max-width: 60%;
       text-align: left;
-      margin: 20rem 4rem 0;
+      margin: 21.5rem 4.5rem 0;
     }
   }
 
@@ -60,6 +60,8 @@ header {
     padding: 1.2rem 3.5rem;
     border: none;
     margin: 4.3rem auto 0;
+
+
   }
 }
 
