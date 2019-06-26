@@ -1,11 +1,6 @@
 header {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(../assets/images/backgrounds/paul-e-harrer-236-unsplash.jpg);
-  background-color: 99aab5;
-  background-blend-mode: darken;
-  //  display: flex;
-  //  flex-direction: column;
-  //  justify-content: space-between;
   background-size: cover;
   background-position: left center;
   height: 61.5rem;
@@ -14,17 +9,17 @@ header {
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 1rem 0;
+    padding: 1rem 0 0;
 
     h2 {
       color: white;
-      margin: 0 1.7rem;
+      margin: 0 2rem 0;
+      // margin: .8rem 4rem 0;
     }
 
     .menu-btn {
-      height: 2rem;
-      display: inline-block;
-      margin-right: 13px;
+      height: 1.3rem;
+      margin: .2rem 1.5rem 0;
 
       @include tablet {
         display: none;
@@ -32,22 +27,21 @@ header {
     }
   }
 
+
   h1 {
     max-width: 90%;
     color: white;
     text-align: center;
-    margin: 20rem auto 0;
+    margin: 21rem auto 0;
 
     @include tablet {
       max-width: 80%;
-      font-size: 5rem;
-      font-weight: 700;
     }
 
     @include desktop {
-      max-width: 60%;
+      max-width: 67%;
       text-align: left;
-      margin: 20rem 4rem 0;
+      margin: 20rem 4.5rem 0;
     }
   }
 
@@ -60,42 +54,58 @@ header {
     padding: 1.2rem 3.5rem;
     border: none;
     margin: 4.3rem auto 0;
+
+    @include tablet {
+      padding: 1.8rem 5.5rem;
+    }
+
+    @include desktop {
+      margin: 2rem 4.5rem 0;
+    }
   }
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 35px;
+  top: 4.3rem;
   right: 2px;
 
-  &.menu--open {
-    a {
-      display: block;
-//      background: lightgrey;
-      color: white;
-      font-size: 1.6rem;
-      text-align: center;
-//      border: 1px solid darkgrey;
-//      border-bottom: none;
-      padding: 0.8rem;
+  @include tablet {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+  }
 
-//      &:last-child {
-//        border-bottom: 1px solid darkgrey;
-//      }
+  a {
+    display: none;
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 1.5rem .5rem 0;
+
+    &:first-child {
+      margin: 0 .5rem 0;
+
+      @include tablet {
+        margin: 0 1.5rem;
+      }
     }
 
     @include tablet {
       display: block;
+      margin: 0 1.5rem;
+    }
+
+    @include desktop {
+      margin: 0 3rem;
     }
   }
 
-  &.menu--closed {
+  &.menu--open {
     a {
-      display: none;
-
-      @include tablet {
-        display: block;
-      }
+      display: block;
     }
   }
 }
