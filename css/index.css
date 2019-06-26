@@ -262,28 +262,21 @@ img {
   height: 250px;
 }
 .about-content .top-about img {
-  height: 150px;
-  width: 100px;
-}
-@media (min-width: 502px) {
-  .about-content .top-about img {
-    height: 250px;
-    width: 200px;
-  }
+  height: 250px;
+  width: 200px;
 }
 .about-content .top-about div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  max-width: 50%;
 }
 .about-content .top-about div h2 {
   text-align: center;
-  font-size: 1.5rem;
 }
 .about-content .top-about div p {
-  font-size: 1rem;
+  font-weight: bold;
 }
 .about-content .bottom-about {
   margin-top: 30px;

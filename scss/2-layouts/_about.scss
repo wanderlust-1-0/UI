@@ -67,29 +67,24 @@
     height: 250px;
 
     img {
-      height: 150px;
-      width: 100px;
-
-      @include tablet{
         height: 250px;
         width: 200px;
       }
-    }
+
 
     div {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 45%;
+      max-width: 50%;
 
       h2 {
         text-align: center;
-        font-size: 1.5rem;
       }
 
       p {
-        font-size: 1rem;
+        font-weight: bold;
       }
     }
   }
@@ -136,6 +131,8 @@
           float: right;
           font-size: 3rem;
         }
+
+
       }
 
       .bio-toggle {
