@@ -33,7 +33,7 @@ class Profile {
             modalImg.src = this.image.src;
             modalH4.textContent = this.element.querySelector('h4').textContent;
             modalTitle.textContent = this.element.querySelector('p').textContent;
-            modalBio.textContent = this.bioInfo.textContent;
+            modalBio.textContent = this.bioInfo.querySelector('.bio-para').textContent
         }});
         this.close.addEventListener('click',  () => {
           this.bioInfo.classList.remove('bio-toggle');
