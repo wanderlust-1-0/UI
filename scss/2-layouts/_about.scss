@@ -1,23 +1,25 @@
 .modal {
   display: none;
+
   @include tablet {
     display: none;
-    position: fixed; 
-    z-index: 1; 
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0); 
+    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 
   }
+
   .modal-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 400px;
@@ -29,8 +31,7 @@
       width: 250px;
     }
   }
-  
- 
+
   .close {
     color: #aaa;
     float: right;
@@ -42,8 +43,8 @@
       cursor: pointer;
     }
   }
-  
-  
+
+
 }
 
 
@@ -51,6 +52,7 @@
 .about-content {
   margin: auto;
   width: 90%;
+
   @include desktop {
     max-width: 1000px;
     margin: auto;
@@ -63,10 +65,11 @@
     align-items: center;
     width: 100%;
     height: 250px;
+
     img {
-     
       height: 150px;
       width: 100px;
+
       @include tablet{
         height: 250px;
         width: 200px;
@@ -128,7 +131,7 @@
         margin: auto;
         margin-top: 20px;
         width: 250px;
-        
+
         .close-bio-mobile {
           float: right;
           font-size: 3rem;
