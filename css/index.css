@@ -80,7 +80,7 @@ h1 {
 }
 @media (min-width: 502px) {
   h1 {
-    font-size: 5.8rem;
+    font-size: 5.2rem;
     font-weight: 700;
   }
 }
@@ -203,16 +203,6 @@ header {
   background-position: left center;
   height: 61.5rem;
 }
-@media (min-width: 502px) {
-  header {
-    height: 65rem;
-  }
-}
-@media (min-width: 800px) {
-  header {
-    height: 70rem;
-  }
-}
 header .header-top {
   display: flex;
   justify-content: space-between;
@@ -246,9 +236,9 @@ header h1 {
 }
 @media (min-width: 800px) {
   header h1 {
-    max-width: 60%;
+    max-width: 67%;
     text-align: left;
-    margin: 21.5rem 4.5rem 0;
+    margin: 17.6rem 4.5rem 0;
   }
 }
 header button {
@@ -260,6 +250,16 @@ header button {
   padding: 1.2rem 3.5rem;
   border: none;
   margin: 4.3rem auto 0;
+}
+@media (min-width: 502px) {
+  header button {
+    padding: 1.8rem 5.5rem;
+  }
+}
+@media (min-width: 800px) {
+  header button {
+    margin: 2rem 4.5rem 0;
+  }
 }
 
 nav {

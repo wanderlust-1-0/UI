@@ -5,12 +5,12 @@ header {
   background-position: left center;
   height: 61.5rem;
 
-  @include tablet {
-    height: 65rem;
-  }
-  @include desktop {
-    height: 70rem;
-  }
+  // @include tablet {
+  //   height: 65rem;
+  // }
+  // @include desktop {
+  //   height: 70rem;
+  // }
 
   .header-top {
     display: flex;
@@ -45,9 +45,9 @@ header {
     }
 
     @include desktop {
-      max-width: 60%;
+      max-width: 67%;
       text-align: left;
-      margin: 21.5rem 4.5rem 0;
+      margin: 17.6rem 4.5rem 0;
     }
   }
 
@@ -61,7 +61,13 @@ header {
     border: none;
     margin: 4.3rem auto 0;
 
+    @include tablet {
+      padding: 1.8rem 5.5rem;
+    }
 
+    @include desktop {
+      margin: 2rem 4.5rem 0;
+    }
   }
 }
 
