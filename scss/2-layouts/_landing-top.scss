@@ -1,0 +1,67 @@
+.landing-top {
+  @include tablet {
+    display: grid;
+    grid-column-gap: 6%; // 11 * 6 == 66
+    grid-template-columns: repeat(12, 2.83333333%); // 66 / 12 == 2.833333
+    grid-template-rows: 8rem auto;
+    grid-template-areas:
+        "landing-top-picture landing-top-picture landing-top-picture landing-top-picture landing-top-picture landing-top-picture landing-top-title landing-top-title landing-top-title landing-top-title landing-top-title landing-top-title"
+        "landing-top-picture landing-top-picture landing-top-picture landing-top-picture landing-top-picture landing-top-picture landing-top-text landing-top-text landing-top-text landing-top-text landing-top-text landing-top-text";
+    width: 100%;
+    margin-top: 15.5rem;
+  }
+
+  h3 {
+    display: block;
+    text-align: center;
+    margin-top: 3.5rem;
+
+    @include tablet {
+      grid-area: landing-top-title;
+      margin: 0 10% 0 15%;
+    }
+  }
+
+  .img-container {
+    float: left;
+    width: 38%;
+    margin-top: 3rem;
+
+    @include tablet {
+      float: none;
+      width: 88%;
+      grid-area: landing-top-picture;
+      margin: 0 20% 0 0;
+    }
+
+    .aspect-ratio-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding-top: 118%;
+
+      img {
+        position: absolute;
+        width: 100%;
+        top: -15%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  p {
+    float: right;
+    max-width: 54%;
+    margin-top: 3rem;
+    margin-left: 1rem;
+
+    @include tablet {
+      grid-area: landing-top-text;
+      float: none;
+      margin: 0 10% 0 15%;
+      max-width: 100%;
+    }
+  }
+}
