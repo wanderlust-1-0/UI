@@ -1,5 +1,6 @@
 .modal {
   display: none;
+  
   @include tablet {
     display: none;
     position: fixed; 
@@ -51,6 +52,7 @@
 .about-content {
   margin: auto;
   width: 90%;
+
   @include desktop {
     max-width: 1000px;
     margin: auto;
