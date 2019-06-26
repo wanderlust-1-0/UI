@@ -207,16 +207,15 @@ header .header-top {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 1rem 0;
+  padding: 1rem 0 0;
 }
 header .header-top h2 {
   color: white;
-  margin: 0.8rem 4rem;
+  margin: 0 2rem 0;
 }
 header .header-top .menu-btn {
-  height: 2rem;
-  display: inline-block;
-  margin-right: 13px;
+  height: 1.3rem;
+  margin: 0.2rem 1.5rem 0;
 }
 @media (min-width: 502px) {
   header .header-top .menu-btn {
@@ -227,7 +226,7 @@ header h1 {
   max-width: 90%;
   color: white;
   text-align: center;
-  margin: 20rem auto 0;
+  margin: 21rem auto 0;
 }
 @media (min-width: 502px) {
   header h1 {
@@ -238,7 +237,7 @@ header h1 {
   header h1 {
     max-width: 67%;
     text-align: left;
-    margin: 17.6rem 4.5rem 0;
+    margin: 20rem 4.5rem 0;
   }
 }
 header button {
@@ -263,29 +262,47 @@ header button {
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 35px;
+  top: 4.3rem;
   right: 2px;
 }
-nav.menu--open a {
-  display: block;
+@media (min-width: 502px) {
+  nav {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+nav a {
+  display: none;
   color: white;
   font-size: 1.6rem;
   text-align: center;
-  padding: 0.8rem;
+  margin: 1.5rem 0.5rem 0;
+}
+nav a:first-child {
+  margin: 0 0.5rem 0;
 }
 @media (min-width: 502px) {
-  nav.menu--open {
-    display: block;
+  nav a:first-child {
+    margin: 0 1.5rem;
   }
-}
-nav.menu--closed a {
-  display: none;
 }
 @media (min-width: 502px) {
-  nav.menu--closed a {
+  nav a {
     display: block;
+    margin: 0 1.5rem;
   }
+}
+@media (min-width: 800px) {
+  nav a {
+    margin: 0 3rem;
+  }
+}
+nav.menu--open a {
+  display: block;
 }
 
 footer {
