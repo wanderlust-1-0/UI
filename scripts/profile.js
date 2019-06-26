@@ -18,6 +18,7 @@ class Profile {
         this.data = this.element.dataset.bio;
         this.bio = this.element.bio;
         this.bioInfo = document.querySelector(`.bio[data-bio='${this.data}']`);
+        this.close = this.bioInfo.querySelector('span');
         this.image = this.element.querySelector('img');
         this.image.addEventListener('click', () => {
             if(parseInt(window.innerWidth) <= 500)
@@ -34,6 +35,9 @@ class Profile {
             modalTitle.textContent = this.element.querySelector('p').textContent;
             modalBio.textContent = this.bioInfo.textContent;
         }});
+        this.close.addEventListener('click',  () => {
+          this.bioInfo.classList.remove('bio-toggle');
+        })
     }
 
 
