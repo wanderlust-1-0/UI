@@ -163,12 +163,19 @@ img {
   margin-top: 30px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 250px;
 }
 .about-content .top-about img {
-  height: 250px;
-  width: 200px;
+  height: 150px;
+  width: 100px;
+}
+@media (min-width: 502px) {
+  .about-content .top-about img {
+    height: 250px;
+    width: 200px;
+  }
 }
 .about-content .top-about div {
   display: flex;
@@ -179,6 +186,10 @@ img {
 }
 .about-content .top-about div h2 {
   text-align: center;
+  font-size: 1.5rem;
+}
+.about-content .top-about div p {
+  font-size: 1rem;
 }
 .about-content .bottom-about {
   margin-top: 30px;
