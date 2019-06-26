@@ -227,7 +227,12 @@ img {
 
 .about-content {
   margin: auto;
-  width: 90%;
+  width: 100%;
+}
+@media (min-width: 502px) {
+  .about-content {
+    width: 90%;
+  }
 }
 @media (min-width: 800px) {
   .about-content {
@@ -259,6 +264,17 @@ img {
 }
 .about-content .bottom-about .profile img {
   height: 250px;
+}
+.about-content .bottom-about .profile h4 {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center;
+}
+.about-content .bottom-about .profile p {
+  margin-top: 0;
+  font-size: 2.1rem;
+  text-align: center;
 }
 .about-content .bottom-about .profile .bio {
   display: none;

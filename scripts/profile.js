@@ -82,8 +82,10 @@ class Profile {
 
 
     bioToggleMobile() {
-        const bios = document.querySelectorAll('.bio');
-        bios.forEach(para => para.classList.remove('bio-toggle'));
+        let bios = document.querySelectorAll('.bio');
+        bios = Array.from(bios);
+        let bioToggleOn = bios.filter(bio => bio.classList.contains('bio-toggle'));
+        bioToggleOn.forEach(bio => bio.classList.remove('bio-toggle'));
         this.bioInfo.classList.add('bio-toggle');
     }
 }
