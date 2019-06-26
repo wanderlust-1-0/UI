@@ -172,7 +172,12 @@ img {
 
 .about-content {
   margin: auto;
-  width: 90%;
+  width: 100%;
+}
+@media (min-width: 502px) {
+  .about-content {
+    width: 90%;
+  }
 }
 @media (min-width: 800px) {
   .about-content {
@@ -189,8 +194,16 @@ img {
   height: 250px;
 }
 .about-content .top-about img {
-  height: 250px;
-  width: 200px;
+  height: 200px;
+  width: 160px;
+  margin-left: 5px;
+}
+@media (min-width: 502px) {
+  .about-content .top-about img {
+    height: 250px;
+    width: 200px;
+    margin-left: 0;
+  }
 }
 .about-content .top-about div {
   display: flex;
@@ -203,7 +216,16 @@ img {
   text-align: center;
 }
 .about-content .top-about div p {
+  font-size: 1rem;
   font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media (min-width: 502px) {
+  .about-content .top-about div p {
+    font-size: 1.6rem;
+    margin: 0;
+  }
 }
 .about-content .bottom-about {
   margin-top: 30px;
@@ -233,7 +255,15 @@ img {
   height: 250px;
 }
 .about-content .bottom-about .profile h4 {
+  margin-top: 15px;
+  margin-bottom: 0;
   font-weight: bold;
+  text-align: center;
+}
+.about-content .bottom-about .profile p {
+  margin-top: 0;
+  font-size: 2.1rem;
+  text-align: center;
 }
 .about-content .bottom-about .profile .bio {
   display: none;
@@ -244,11 +274,6 @@ img {
 .about-content .bottom-about .profile .bio .close-bio-mobile {
   float: right;
   font-size: 3rem;
-}
-@media (min-width: 502px) {
-  .about-content .bottom-about .profile .bio .close-bio-mobile {
-    font-size: 0rem;
-  }
 }
 .about-content .bottom-about .profile .bio-toggle {
   display: block;
