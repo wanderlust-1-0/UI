@@ -16,9 +16,15 @@
 
   @include tablet {
     width: 100%;
-    max-width: 800px;
+    //max-width: 800px;
+    justify-content: center;
+    //align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
   }
 
   div {
@@ -31,15 +37,16 @@
       width: 1fr;
       min-width: 20rem;
       max-width: 32rem;
+      margin-left: 5px;
+      margin-right: 5px;
+    
+     
+
+     
+    }
+
+    @include desktop {
       margin: 0 2%;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
     }
 
     img {
@@ -48,6 +55,8 @@
     }
 
     h3 {
+      text-align: center;
+      width: 400px;
       margin-top: 1.3rem;
     }
   }

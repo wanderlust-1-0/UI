@@ -182,9 +182,14 @@ img {
 @media (min-width: 502px) {
   .middle-index {
     width: 100%;
-    max-width: 800px;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 800px) {
+  .middle-index {
+    flex-wrap: nowrap;
   }
 }
 .middle-index div {
@@ -198,13 +203,13 @@ img {
     width: 1fr;
     min-width: 20rem;
     max-width: 32rem;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media (min-width: 800px) {
+  .middle-index div {
     margin: 0 2%;
-  }
-  .middle-index div:first-child {
-    margin-left: 0;
-  }
-  .middle-index div:last-child {
-    margin-right: 0;
   }
 }
 .middle-index div img {
@@ -212,6 +217,8 @@ img {
   width: 4rem;
 }
 .middle-index div h3 {
+  text-align: center;
+  width: 400px;
   margin-top: 1.3rem;
 }
 
