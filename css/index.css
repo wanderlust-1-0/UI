@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 3.6rem;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   h1 {
     font-size: 5.2rem;
     font-weight: 700;
@@ -90,7 +90,7 @@ h2 {
   font-weight: bold;
   padding-bottom: 10px;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   h2 {
     font-size: 3rem;
   }
@@ -105,7 +105,7 @@ h3 {
   font-size: 2.1rem;
   font-weight: bold;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   h3 {
     font-size: 2.6rem;
   }
@@ -121,7 +121,7 @@ h4 {
   padding-bottom: 10px;
   font-weight: bold;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   h4 {
     font-size: 2.5rem;
   }
@@ -138,7 +138,7 @@ p {
   font-weight: bold;
   padding-bottom: 10px;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   p {
     font-size: 2rem;
   }
@@ -178,7 +178,7 @@ img {
   flex-direction: column;
   margin: 1.5rem auto 0;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .middle-index {
     width: 100%;
     justify-content: center;
@@ -198,7 +198,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .middle-index div {
     flex-wrap: wrap;
     width: 1fr;
@@ -217,7 +217,7 @@ img {
   margin-top: 1.2rem;
   width: 4rem;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .middle-index div img {
     width: 6rem;
   }
@@ -238,7 +238,7 @@ img {
   flex-direction: column;
   margin-top: 5.7rem;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .bottom-index {
     position: static;
     display: grid;
@@ -255,7 +255,7 @@ img {
   font-size: 2.5rem;
   top: 20px;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .bottom-index h2 {
     position: static;
     grid-area: btm-idx-h2;
@@ -273,7 +273,7 @@ img {
   width: 237px;
   align-self: flex-end;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .bottom-index img {
     grid-area: btm-idx-img;
     width: 100%;
@@ -284,7 +284,7 @@ img {
   text-align: center;
   font-size: 2.5rem;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .bottom-index h3 {
     grid-area: btm-idx-h3;
     text-align: start;
@@ -296,7 +296,7 @@ img {
     margin-top: 6.5rem;
   }
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .bottom-index p {
     grid-area: btm-idx-p;
   }
@@ -305,7 +305,7 @@ img {
 .modal {
   display: none;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .modal {
     display: none;
     position: fixed;
@@ -353,7 +353,7 @@ img {
   margin: auto;
   width: 90%;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .about-content {
     width: 90%;
   }
@@ -400,7 +400,7 @@ img {
   font-weight: lighter;
   text-align: center;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .about-content .bottom-about .profile p {
     font-size: 2.5rem;
     font-weight: lighter;
@@ -426,7 +426,7 @@ img {
   display: block;
 }
 
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .landing-top {
     display: grid;
     grid-column-gap: 6%;
@@ -447,7 +447,7 @@ img {
   text-align: center;
   margin-top: 3.5rem;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .landing-top h3 {
     grid-area: landing-top-title;
     margin: 0 10% 0 0;
@@ -463,7 +463,7 @@ img {
   width: 38%;
   margin-top: 3rem;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .landing-top .img-container {
     float: none;
     width: 88%;
@@ -496,7 +496,7 @@ img {
   margin-top: 3rem;
   margin-left: 1rem;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   .landing-top p {
     grid-area: landing-top-text;
     float: none;
@@ -530,7 +530,7 @@ header .header-top .menu-btn {
   height: 1.3rem;
   margin: 0.2rem 1.5rem 0;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   header .header-top .menu-btn {
     display: none;
   }
@@ -541,7 +541,7 @@ header h1 {
   text-align: center;
   margin: 21rem auto 0;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   header h1 {
     max-width: 80%;
   }
@@ -563,7 +563,7 @@ header button {
   border: none;
   margin: 4.3rem auto 0;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   header button {
     padding: 1.5rem 4.5rem;
   }
@@ -582,7 +582,7 @@ nav {
   top: 4.3rem;
   right: 2px;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   nav {
     position: static;
     flex-direction: row;
@@ -599,12 +599,12 @@ nav a {
 nav a:first-child {
   margin: 0 0.5rem 0;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   nav a:first-child {
     margin: 0 1.5rem;
   }
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   nav a {
     display: block;
     margin: 0 1.5rem;
@@ -626,7 +626,7 @@ footer {
   margin-top: 3rem;
   margin-bottom: 20px;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   footer {
     justify-content: space-between;
     margin: auto;
@@ -644,7 +644,7 @@ footer p {
   display: none;
   margin-left: 10px;
 }
-@media (min-width: 502px) {
+@media (min-width: 501px) {
   footer p {
     display: block;
   }
