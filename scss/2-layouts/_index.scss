@@ -66,6 +66,7 @@
 
       .askew {
         transform: rotate(33.3333333deg);
+        transform-origin: bottom right;
         z-index: 1;
       }
     }
