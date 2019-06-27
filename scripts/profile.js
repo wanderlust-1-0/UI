@@ -53,7 +53,7 @@ class Profile {
               setTimeout(() => lock = false, 250);
               if(parseInt(window.innerWidth) > maxMobileWidth) {
                 this.bioInfo.classList.remove('bio-toggle');
-                
+
               }
             }
           })
@@ -62,7 +62,7 @@ class Profile {
 
         (() => {
           let modalLock = false;
-        
+
           window.addEventListener('resize', () => {
             const minTabletWidth = 500;
             if(!modalLock) {
@@ -70,11 +70,11 @@ class Profile {
               setTimeout(() => modalLock = false, 250);
               if(parseInt(window.innerWidth) <= minTabletWidth) {
                 modal.style.display = 'none';
-                
+
               }
             }
           })
-        
+
         })();
 
     }

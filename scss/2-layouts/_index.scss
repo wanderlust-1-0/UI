@@ -18,12 +18,13 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 5.4;
   }
 
   @include desktop {
     flex-wrap: nowrap;
+    margin-top: 9.3rem;
   }
-
 
   div {
     display: flex;
@@ -37,7 +38,7 @@
       max-width: 30rem;
       margin-left: 5px;
       margin-right: 5px;
-      }
+    }
 
     @include desktop {
       margin: 0 2%;
@@ -46,6 +47,14 @@
     img {
       margin-top: 1.2rem;
       width: 4rem;
+
+      @include tablet {
+        width: 6rem;
+      }
+
+      @include desktop {
+        width: 8rem;
+      }
     }
 
     h3 {
@@ -112,7 +121,6 @@
     @include tablet {
       grid-area: btm-idx-h3;
       text-align: start;
-      // margin-top: 5rem;
     }
 
     @include desktop {
