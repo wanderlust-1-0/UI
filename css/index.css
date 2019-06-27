@@ -182,7 +182,9 @@ img {
 @media (min-width: 502px) {
   .middle-index {
     width: 100%;
+    max-width: 800px;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 .middle-index div {
@@ -217,33 +219,18 @@ img {
   position: relative;
   margin-top: 5.7rem;
 }
-.bottom-index div {
-  position: absolute;
-  width: 14.3rem;
-  right: 11.5rem;
-  bottom: 0;
+.bottom-index img {
+  width: 143px;
 }
 @media (min-width: 502px) {
-  .bottom-index div {
-    width: 23.65rem;
+  .bottom-index img {
+    width: 236px;
   }
 }
 @media (min-width: 800px) {
-  .bottom-index div {
-    width: 33rem;
+  .bottom-index img {
+    width: 330px;
   }
-}
-.bottom-index div img {
-  position: absolute;
-  width: 14.3rem;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-}
-.bottom-index div .askew {
-  transform: rotate(33.3333333deg);
-  transform-origin: bottom right;
-  z-index: 1;
 }
 
 .modal {
