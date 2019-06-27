@@ -169,16 +169,67 @@ img {
   max-width: 1000px;
   margin: 0 auto;
 }
-.index-content h3 {
-  text-align: center;
-}
 .index-content p {
   margin-top: 2rem;
 }
 .index-content .middle-index {
   width: 93%;
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem auto 0;
+}
+@media (min-width: 502px) {
+  .index-content .middle-index {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.index-content .middle-index div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 502px) {
+  .index-content .middle-index div {
+    width: 1fr;
+    min-width: 10rem;
+    max-width: 25rem;
+    margin: 0 1rem;
+  }
+}
+.index-content .middle-index div img {
+  margin-top: 1.2rem;
+  width: 4rem;
+}
+.index-content .middle-index div h3 {
+  margin-top: 1.3rem;
+}
+.index-content .bottom-index {
+  position: relative;
+  margin-top: 5.7rem;
+}
+.index-content .bottom-index div img {
+  position: absolute;
+  float: right;
+  width: 14.3rem;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+@media (min-width: 502px) {
+  .index-content .bottom-index div img {
+    width: 23.65rem;
+  }
+}
+@media (min-width: 800px) {
+  .index-content .bottom-index div img {
+    width: 33rem;
+  }
+}
+.index-content .bottom-index div .askew {
+  transform: rotate(33.3333333deg);
+  z-index: 1;
 }
 
 .modal {
