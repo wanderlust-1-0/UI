@@ -9,7 +9,6 @@
 }
 
 .middle-index {
-  width: 93%;
   display: flex;
   flex-direction: column;
   margin: 1.5rem auto 0;
@@ -38,15 +37,10 @@
       max-width: 30rem;
       margin-left: 5px;
       margin-right: 5px;
-    
-     
-
-     
-    }
+      }
 
     @include desktop {
       margin: 0 2%;
-      flex-wrap: nowrap;
     }
 
     img {
@@ -55,7 +49,7 @@
     }
 
     h3 {
-      text-align: left;
+      text-align: center;
       margin-top: 1.3rem;
     }
   }
