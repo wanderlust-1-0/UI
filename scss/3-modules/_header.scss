@@ -56,10 +56,11 @@ header {
     margin: 4.3rem auto 0;
 
     @include tablet {
-      padding: 1.8rem 5.5rem;
+      padding: 1.5rem 4.5rem;
     }
 
     @include desktop {
+      padding: 1.8rem 5.5rem;
       margin: 2rem 4.5rem 0;
     }
   }

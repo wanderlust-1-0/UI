@@ -172,73 +172,75 @@ img {
 .index-content p {
   margin-top: 2rem;
 }
-.index-content .middle-index {
+
+.middle-index {
   width: 93%;
   display: flex;
   flex-direction: column;
   margin: 1.5rem auto 0;
 }
 @media (min-width: 502px) {
-  .index-content .middle-index {
+  .middle-index {
     width: 100%;
     flex-direction: row;
   }
 }
-.index-content .middle-index div {
+.middle-index div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (min-width: 502px) {
-  .index-content .middle-index div {
+  .middle-index div {
     flex-wrap: wrap;
     width: 1fr;
     min-width: 20rem;
     max-width: 32rem;
     margin: 0 2%;
   }
-  .index-content .middle-index div:first-child {
+  .middle-index div:first-child {
     margin-left: 0;
   }
-  .index-content .middle-index div:last-child {
+  .middle-index div:last-child {
     margin-right: 0;
   }
 }
-.index-content .middle-index div img {
+.middle-index div img {
   margin-top: 1.2rem;
   width: 4rem;
 }
-.index-content .middle-index div h3 {
+.middle-index div h3 {
   margin-top: 1.3rem;
 }
-.index-content .bottom-index {
+
+.bottom-index {
   position: relative;
   margin-top: 5.7rem;
 }
-.index-content .bottom-index div {
+.bottom-index div {
   position: absolute;
   width: 14.3rem;
   right: 11.5rem;
   bottom: 0;
 }
 @media (min-width: 502px) {
-  .index-content .bottom-index div {
+  .bottom-index div {
     width: 23.65rem;
   }
 }
 @media (min-width: 800px) {
-  .index-content .bottom-index div {
+  .bottom-index div {
     width: 33rem;
   }
 }
-.index-content .bottom-index div img {
+.bottom-index div img {
   position: absolute;
   width: 14.3rem;
   right: 0;
   bottom: 0;
   z-index: 2;
 }
-.index-content .bottom-index div .askew {
+.bottom-index div .askew {
   transform: rotate(33.3333333deg);
   transform-origin: bottom right;
   z-index: 1;
@@ -507,11 +509,12 @@ header button {
 }
 @media (min-width: 502px) {
   header button {
-    padding: 1.8rem 5.5rem;
+    padding: 1.5rem 4.5rem;
   }
 }
 @media (min-width: 800px) {
   header button {
+    padding: 1.8rem 5.5rem;
     margin: 2rem 4.5rem 0;
   }
 }
