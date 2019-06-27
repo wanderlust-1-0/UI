@@ -213,6 +213,9 @@ img {
   height: 250px;
   width: 250px;
 }
+.modal .modal-content .modal-bio {
+  font-size: 1.5rem;
+}
 .modal .close {
   color: #aaa;
   float: right;
@@ -227,7 +230,7 @@ img {
 
 .about-content {
   margin: auto;
-  width: 100%;
+  width: 90%;
 }
 @media (min-width: 502px) {
   .about-content {
@@ -273,8 +276,20 @@ img {
 }
 .about-content .bottom-about .profile p {
   margin-top: 0;
-  font-size: 2.1rem;
+  font-weight: lighter;
   text-align: center;
+}
+@media (min-width: 502px) {
+  .about-content .bottom-about .profile p {
+    font-size: 2.5rem;
+    font-weight: lighter;
+  }
+}
+@media (min-width: 800px) {
+  .about-content .bottom-about .profile p {
+    font-size: 2.9rem;
+    font-weight: lighter;
+  }
 }
 .about-content .bottom-about .profile .bio {
   display: none;
@@ -288,11 +303,6 @@ img {
 }
 .about-content .bottom-about .profile .bio-toggle {
   display: block;
-}
-@media (min-width: 502px) {
-  .about-content .bottom-about .profile .bio-toggle {
-    display: none;
-  }
 }
 
 @media (min-width: 502px) {
