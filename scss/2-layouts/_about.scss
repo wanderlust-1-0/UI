@@ -1,24 +1,25 @@
 .modal {
   display: none;
-  
+
   @include tablet {
     display: none;
-    position: fixed; 
-    z-index: 1; 
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0); 
+    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 
   }
+
   .modal-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 400px;
@@ -29,9 +30,12 @@
       height: 250px;
       width: 250px;
     }
+
+    .modal-bio {
+      font-size: 1.5rem;
+    }
   }
-  
- 
+
   .close {
     color: #aaa;
     float: right;
@@ -43,15 +47,15 @@
       cursor: pointer;
     }
   }
-  
-  
+
+
 }
 
 
 
 .about-content {
   margin: auto;
-  width: 100%;
+  width: 90%;
 
   @include tablet {
     width: 90%;
@@ -61,7 +65,6 @@
     max-width: 1000px;
     margin: auto;
   }
-
 
   .bottom-about {
     margin-top: 30px;
@@ -77,8 +80,6 @@
     h2 {
       width: 100%;
       text-align: center;
-      font-weight: bold;
-      font-family: 'Roboto'
     }
 
     .profile {
@@ -100,8 +101,18 @@
 
       p {
         margin-top: 0;
-        font-size: 2.1rem;
+        font-weight: lighter;
         text-align: center;
+
+        @include tablet {
+          font-size: 2.5rem;
+          font-weight: lighter;
+        }
+      
+        @include desktop {
+          font-size: 2.9rem;
+          font-weight: lighter;
+        }
       }
 
       .bio {
@@ -109,21 +120,17 @@
         margin: auto;
         margin-top: 20px;
         width: 250px;
-        
+
         .close-bio-mobile {
           float: right;
           font-size: 3rem;
         }
-        
-        
+
+
       }
 
       .bio-toggle {
         display: block;
-
-        @include tablet {
-          display: none;
-        }
       }
     }
   }

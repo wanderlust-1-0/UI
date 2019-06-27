@@ -1,4 +1,19 @@
 .index-content {
+  width: $mobile-content-width;
   max-width: $content-max-width;
   margin: 0 auto;
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+
+  .middle-index {
+    width: 93%;
+    display: block;
+    margin: 0 auto;
+  }
 }
