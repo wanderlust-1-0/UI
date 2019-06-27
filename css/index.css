@@ -174,7 +174,6 @@ img {
 }
 
 .middle-index {
-  width: 93%;
   display: flex;
   flex-direction: column;
   margin: 1.5rem auto 0;
@@ -202,7 +201,7 @@ img {
     flex-wrap: wrap;
     width: 1fr;
     min-width: 20rem;
-    max-width: 32rem;
+    max-width: 30rem;
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -218,7 +217,6 @@ img {
 }
 .middle-index div h3 {
   text-align: center;
-  width: 400px;
   margin-top: 1.3rem;
 }
 

@@ -9,16 +9,13 @@
 }
 
 .middle-index {
-  width: 93%;
   display: flex;
   flex-direction: column;
   margin: 1.5rem auto 0;
 
   @include tablet {
     width: 100%;
-    //max-width: 800px;
     justify-content: center;
-    //align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -26,6 +23,7 @@
   @include desktop {
     flex-wrap: nowrap;
   }
+
 
   div {
     display: flex;
@@ -36,14 +34,10 @@
       flex-wrap: wrap;
       width: 1fr;
       min-width: 20rem;
-      max-width: 32rem;
+      max-width: 30rem;
       margin-left: 5px;
       margin-right: 5px;
-    
-     
-
-     
-    }
+      }
 
     @include desktop {
       margin: 0 2%;
@@ -56,7 +50,6 @@
 
     h3 {
       text-align: center;
-      width: 400px;
       margin-top: 1.3rem;
     }
   }
