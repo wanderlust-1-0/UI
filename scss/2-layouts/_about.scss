@@ -30,6 +30,10 @@
       height: 250px;
       width: 250px;
     }
+
+    .modal-bio {
+      font-size: 1.5rem;
+    }
   }
 
   .close {
@@ -97,8 +101,18 @@
 
       p {
         margin-top: 0;
-        font-size: 2.1rem;
+        font-weight: lighter;
         text-align: center;
+
+        @include tablet {
+          font-size: 2.5rem;
+          font-weight: lighter;
+        }
+      
+        @include desktop {
+          font-size: 2.9rem;
+          font-weight: lighter;
+        }
       }
 
       .bio {
@@ -117,10 +131,6 @@
 
       .bio-toggle {
         display: block;
-
-        @include tablet {
-          display: none;
-        }
       }
     }
   }
