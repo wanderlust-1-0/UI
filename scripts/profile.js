@@ -47,7 +47,7 @@ class Profile {
           let lock = false;
 
           window.addEventListener('resize', () => {
-            const maxMobileWidth = 499;
+            const maxMobileWidth = 500;
             if(!lock) {
               lock = true;
               setTimeout(() => lock = false, 250);
