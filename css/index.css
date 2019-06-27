@@ -227,7 +227,7 @@ img {
 
 .about-content {
   margin: auto;
-  width: 100%;
+  width: 90%;
 }
 @media (min-width: 502px) {
   .about-content {
