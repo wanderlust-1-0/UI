@@ -14,21 +14,29 @@
     margin: 1.5rem auto 0;
 
     @include tablet {
+      width: 100%;
       flex-direction: row;
-      justify-content: space-between;
     }
 
     div {
       display: flex;
       flex-direction: column;
       align-items: center;
-      flex-wrap: wrap;
 
       @include tablet {
+        flex-wrap: wrap;
         width: 1fr;
-        min-width: 10rem;
-        max-width: 25rem;
-        margin: 0 1rem;
+        min-width: 20rem;
+        max-width: 32rem;
+        margin: 0 2%;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       img {
@@ -47,25 +55,30 @@
     margin-top: 5.7rem;
 
     div {
+      position: absolute;
+      width: 14.3rem;
+      right: 11.5rem;
+      bottom: 0;
+
+      @include tablet {
+        width: 23.65rem;
+      }
+
+      @include desktop {
+        width: 33rem;
+      }
+
       img {
         position: absolute;
-        float: right;
         width: 14.3rem;
         right: 0;
         bottom: 0;
         z-index: 2;
-
-        @include tablet {
-          width: 23.65rem;
-        }
-
-        @include desktop {
-          width: 33rem;
-        }
       }
 
       .askew {
         transform: rotate(33.3333333deg);
+        transform-origin: bottom right;
         z-index: 1;
       }
     }
