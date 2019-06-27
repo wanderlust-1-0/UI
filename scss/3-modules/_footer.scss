@@ -2,21 +2,19 @@ footer {
   width: 90%;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 3rem;
   margin-bottom: 20px;
 
   @include tablet {
     justify-content: space-between;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 7.5rem;
   }
 
   @include desktop {
     max-width: $content-max-width;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 12rem;
   }
 
   p {
