@@ -6,69 +6,66 @@
   p {
     margin-top: 2rem;
   }
+}
 
-  .middle-index {
-    width: 93%;
-    display: flex;
-    flex-direction: column;
-    margin: 1.5rem auto 0;
+.middle-index {
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem auto 0;
 
-    @include tablet {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-wrap: wrap;
-
-      @include tablet {
-        width: 1fr;
-        min-width: 10rem;
-        max-width: 25rem;
-        margin: 0 1rem;
-      }
-
-      img {
-        margin-top: 1.2rem;
-        width: 4rem;
-      }
-
-      h3 {
-        margin-top: 1.3rem;
-      }
-    }
+  @include tablet {
+    width: 100%;
+    max-width: 800px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  .bottom-index {
-    position: relative;
-    margin-top: 5.7rem;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    div {
-      img {
-        position: absolute;
-        float: right;
-        width: 14.3rem;
-        right: 0;
-        bottom: 0;
-        z-index: 2;
+    @include tablet {
+      flex-wrap: wrap;
+      width: 1fr;
+      min-width: 20rem;
+      max-width: 32rem;
+      margin: 0 2%;
 
-        @include tablet {
-          width: 23.65rem;
-        }
-
-        @include desktop {
-          width: 33rem;
-        }
+      &:first-child {
+        margin-left: 0;
       }
 
-      .askew {
-        transform: rotate(33.3333333deg);
-        transform-origin: bottom right;
-        z-index: 1;
+      &:last-child {
+        margin-right: 0;
       }
+    }
+
+    img {
+      margin-top: 1.2rem;
+      width: 4rem;
+    }
+
+    h3 {
+      margin-top: 1.3rem;
+    }
+  }
+}
+
+.bottom-index {
+  position: relative;
+  margin-top: 5.7rem;
+
+  img {
+    width: 143px;
+
+    @include tablet {
+      width: 236px;
+    }
+
+    @include desktop {
+      width: 330px;
     }
   }
 }
