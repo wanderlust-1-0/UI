@@ -1,5 +1,5 @@
 (() => {
-  function rateLimitedFunctionFactory({ sideEffect, timeout = 300, triggeredWhileLockedEffect }) {
+  function rateLimitedFunctionFactory({ sideEffect, triggeredWhileLockedEffect, timeout = 300 }) {
     let locked = false;
     let triggeredWhileLocked = false;
 
@@ -35,10 +35,10 @@
           _nav.classList.remove('menu--open');
         }
       },
-      // optionally change the default timeout duration
-      // timeout: 250,
       // optionally add a function that runs when the event is triggered but locked
       // triggeredWhileLockedEffect: () => alert('locked out'),
+      // optionally change the default timeout duration
+      // timeout: 250,
     });
 
     menuBtnElement.addEventListener('click', toggleNav);
