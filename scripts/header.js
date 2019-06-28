@@ -1,7 +1,7 @@
 (() => {
   function rateLimitedFunctionFactory({ sideEffect, timeout = 300 }) {
     let locked = false;
-    let firedWhileLocked = false;
+    let triggeredWhileLocked = false;
 
     return () => {
       if (!locked) {
@@ -9,13 +9,13 @@
         sideEffect();
         setTimeout(() => {
           locked = false;
-          if (firedWhileLocked) {
-            firedWhileLocked = false;
+          if (triggeredWhileLocked) {
+            triggeredWhileLocked = false;
             sideEffect();
           }
         }, timeout);
       } else {
-        firedWhileLocked = true;
+        triggeredWhileLocked = true;
       }
     };
   }
