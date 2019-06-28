@@ -46,6 +46,7 @@ class Profile {
 
     (() => {
       let lock = false;
+      let firedWhileLocked = false;
 
       window.addEventListener('resize', () => {
         const maxMobileWidth = 500;
@@ -53,16 +54,23 @@ class Profile {
           lock = true;
           setTimeout(() => {
             lock = false;
+            if (firedWhileLocked && parseInt(window.innerWidth, 10) > maxMobileWidth) {
+              firedWhileLocked = false;
+              this.bioInfo.classList.remove('bio-toggle');
+            }
           }, 250);
           if (parseInt(window.innerWidth, 10) > maxMobileWidth) {
             this.bioInfo.classList.remove('bio-toggle');
           }
+        } else {
+          firedWhileLocked = true;
         }
       });
     })();
 
     (() => {
       let modalLock = false;
+      let firedWhileLocked = false;
 
       window.addEventListener('resize', () => {
         const minTabletWidth = 500;
@@ -70,10 +78,16 @@ class Profile {
           modalLock = true;
           setTimeout(() => {
             modalLock = false;
+            if (firedWhileLocked && parseInt(window.innerWidth, 10) <= minTabletWidth) {
+              firedWhileLocked = false;
+              modal.style.display = 'none';
+            }
           }, 250);
           if (parseInt(window.innerWidth, 10) <= minTabletWidth) {
             modal.style.display = 'none';
           }
+        } else {
+          firedWhileLocked = true;
         }
       });
     })();
