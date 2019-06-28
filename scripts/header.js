@@ -1,5 +1,5 @@
 (() => {
-  function rateLimitedFunctionFactory({ sideEffect, timeout = 300 }) {
+  function rateLimitedFunctionFactory({ sideEffect, timeout = 300, triggeredWhileLockedEffect }) {
     let locked = false;
     let triggeredWhileLocked = false;
 
@@ -16,12 +16,13 @@
         }, timeout);
       } else {
         triggeredWhileLocked = true;
+        if (triggeredWhileLockedEffect) triggeredWhileLockedEffect();
       }
     };
   }
 
   function newMenuButton({ menuBtnElement }) {
-    const _nav = document.getElementsByTagName('nav')[0];
+    const _nav = document.querySelector('nav');
     const _maxMobileWidth = 500;
 
     const toggleNav = () => {
@@ -34,12 +35,16 @@
           _nav.classList.remove('menu--open');
         }
       },
-      // timeout: 250, this line is where you can optionally change the default timeout duration
+      // optionally change the default timeout duration
+      // timeout: 250,
+      // optionally add a function that runs when the event is triggered but locked
+      // triggeredWhileLockedEffect: () => alert('locked out'),
     });
 
     menuBtnElement.addEventListener('click', toggleNav);
     window.addEventListener('resize', conditionallyCloseMenu);
   }
+
 
   newMenuButton({ menuBtnElement: document.querySelector('.menu-btn') });
 })();
