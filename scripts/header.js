@@ -28,7 +28,6 @@
       _nav.classList.toggle('menu--open');
     };
 
-
     const conditionallyCloseMenu = rateLimitedFunctionFactory({
       sideEffect: () => {
         if (parseInt(window.innerWidth, 10) > _maxMobileWidth) {
