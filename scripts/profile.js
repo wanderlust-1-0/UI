@@ -12,6 +12,22 @@ window.onclick = (event) => {
   }
 };
 
+function rateLimitedFunctionFactory({ sideEffect, triggeredWhileLockedEffect, timeout = 300 }) {
+  let locked = false;
+
+  return () => {
+    if (!locked) {
+      locked = true;
+      setTimeout(() => {
+        locked = false;
+        sideEffect();
+      }, timeout);
+    } else if (triggeredWhileLockedEffect) {
+      triggeredWhileLockedEffect();
+    }
+  };
+}
+
 class Profile {
   constructor(element) {
     this.element = element;
@@ -44,53 +60,25 @@ class Profile {
       this.bioInfo.classList.remove('bio-toggle');
     });
 
-    (() => {
-      let lock = false;
-      let firedWhileLocked = false;
-
-      window.addEventListener('resize', () => {
+    window.addEventListener('resize', rateLimitedFunctionFactory({
+      sideEffect: () => {
         const maxMobileWidth = 500;
-        if (!lock) {
-          lock = true;
-          setTimeout(() => {
-            lock = false;
-            if (firedWhileLocked && parseInt(window.innerWidth, 10) > maxMobileWidth) {
-              firedWhileLocked = false;
-              this.bioInfo.classList.remove('bio-toggle');
-            }
-          }, 250);
-          if (parseInt(window.innerWidth, 10) > maxMobileWidth) {
-            this.bioInfo.classList.remove('bio-toggle');
-          }
-        } else {
-          firedWhileLocked = true;
-        }
-      });
-    })();
 
-    (() => {
-      let modalLock = false;
-      let firedWhileLocked = false;
-
-      window.addEventListener('resize', () => {
-        const minTabletWidth = 500;
-        if (!modalLock) {
-          modalLock = true;
-          setTimeout(() => {
-            modalLock = false;
-            if (firedWhileLocked && parseInt(window.innerWidth, 10) <= minTabletWidth) {
-              firedWhileLocked = false;
-              modal.style.display = 'none';
-            }
-          }, 250);
-          if (parseInt(window.innerWidth, 10) <= minTabletWidth) {
-            modal.style.display = 'none';
-          }
-        } else {
-          firedWhileLocked = true;
+        if (parseInt(window.innerWidth, 10) > maxMobileWidth) {
+          this.bioInfo.classList.remove('bio-toggle');
         }
-      });
-    })();
+      },
+    }));
+
+    window.addEventListener('resize', rateLimitedFunctionFactory({
+      sideEffect: () => {
+        const minTabletWidth = 501;
+
+        if (parseInt(window.innerWidth, 10) < minTabletWidth) {
+          modal.style.display = 'none';
+        }
+      },
+    }));
   }
 
   bioToggleMobile() {
