@@ -1,22 +1,16 @@
 (() => {
   function rateLimitedFunctionFactory({ sideEffect, triggeredWhileLockedEffect, timeout = 300 }) {
     let locked = false;
-    let triggeredWhileLocked = false;
 
     return () => {
       if (!locked) {
         locked = true;
-        sideEffect();
         setTimeout(() => {
           locked = false;
-          if (triggeredWhileLocked) {
-            triggeredWhileLocked = false;
-            sideEffect();
-          }
+          sideEffect();
         }, timeout);
-      } else {
-        triggeredWhileLocked = true;
-        if (triggeredWhileLockedEffect) triggeredWhileLockedEffect();
+      } else if (triggeredWhileLockedEffect) {
+        triggeredWhileLockedEffect();
       }
     };
   }
@@ -35,10 +29,6 @@
           _nav.classList.remove('menu--open');
         }
       },
-      // optionally add a function that runs when the event is triggered but locked
-      // triggeredWhileLockedEffect: () => alert('locked out'),
-      // optionally change the default timeout duration
-      // timeout: 250,
     });
 
     menuBtnElement.addEventListener('click', toggleNav);
