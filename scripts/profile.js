@@ -88,13 +88,9 @@ const bios = document.querySelectorAll('.bio');
 window.addEventListener('resize', rateLimitedFunctionFactory({
   sideEffect: () => {
     const maxMobileWidth = 500;
-    console.log('outer');
-
 
     if (parseInt(window.innerWidth, 10) > maxMobileWidth) {
       bios.forEach((bio) => {
-        console.log('inner');
-
         bio.classList.remove('bio-toggle');
       });
     }
