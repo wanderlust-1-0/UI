@@ -59,26 +59,6 @@ class Profile {
     this.close.addEventListener('click', () => {
       this.bioInfo.classList.remove('bio-toggle');
     });
-
-    window.addEventListener('resize', rateLimitedFunctionFactory({
-      sideEffect: () => {
-        const maxMobileWidth = 500;
-
-        if (parseInt(window.innerWidth, 10) > maxMobileWidth) {
-          this.bioInfo.classList.remove('bio-toggle');
-        }
-      },
-    }));
-
-    window.addEventListener('resize', rateLimitedFunctionFactory({
-      sideEffect: () => {
-        const minTabletWidth = 501;
-
-        if (parseInt(window.innerWidth, 10) < minTabletWidth) {
-          modal.style.display = 'none';
-        }
-      },
-    }));
   }
 
   bioToggleMobile() {
@@ -92,3 +72,31 @@ class Profile {
 
 const profiles = document.querySelectorAll('.profile');
 profiles.forEach(profile => new Profile(profile));
+
+window.addEventListener('resize', rateLimitedFunctionFactory({
+  sideEffect: () => {
+    const minTabletWidth = 501;
+
+    if (parseInt(window.innerWidth, 10) < minTabletWidth) {
+      modal.style.display = 'none';
+    }
+  },
+}));
+
+const bios = document.querySelectorAll('.bio');
+
+window.addEventListener('resize', rateLimitedFunctionFactory({
+  sideEffect: () => {
+    const maxMobileWidth = 500;
+    console.log('outer');
+
+
+    if (parseInt(window.innerWidth, 10) > maxMobileWidth) {
+      bios.forEach((bio) => {
+        console.log('inner');
+
+        bio.classList.remove('bio-toggle');
+      });
+    }
+  },
+}));
