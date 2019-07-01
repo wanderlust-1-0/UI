@@ -15,24 +15,28 @@
   }
 
   .modal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 400px;
-    height: 500px;
-    border-radius: 15px;
+    display: none;
 
-    img {
-      height: 250px;
-      width: 250px;
-    }
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 400px;
+      height: 500px;
+      border-radius: 15px;
 
-    .modal-bio {
-      font-size: 1.5rem;
+      img {
+        height: 250px;
+        width: 250px;
+      }
+
+      .modal-bio {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -108,7 +112,7 @@
           font-size: 2.5rem;
           font-weight: lighter;
         }
-      
+
         @include desktop {
           font-size: 2.9rem;
           font-weight: lighter;
@@ -126,11 +130,14 @@
           font-size: 3rem;
         }
 
-
       }
 
       .bio-toggle {
         display: block;
+
+        @include tablet {
+          display: none;
+        }
       }
     }
   }
